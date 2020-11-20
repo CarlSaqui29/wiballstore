@@ -1,0 +1,405 @@
+<!--------------------------- 
+Acknowledgement: 
+
+CodingNepal | responsive sidebar - https://www.codingnepalweb.com/ 
+Schwartz-Edmisten Web Design Tutorial | transparent blur header - https://schwartz-edmisten.com/ 
+Unplash | parallax photos -https://unsplash.com/ 
+Font Awesome | "Font Awesome by Dave Gandy - http://fontawesome.io". 
+ADDISON LEGERE | golden text - https://addisonlegere.com/blog/gold-text-with-css-image/ 
+W3 school | framework - https://www.w3schools.com/ 
+bootstrap | framework - https://getbootstrap.com/ 
+text stroke - Chris Coyler 
+
+I want to thank you all from the bottom of my heart <3 
+----------------------------> 
+<!--------------------------- 
+Web Developer Name: Carl Saqui 
+Description: Wiball Store 
+Author: Carl Saqui 
+Version: 1.0 Date 
+Created: 08-30-2020 
+Copyright © 2020 wiballstore. All rights reserved. 
+----------------------------> 
+<!DOCTYPE html> 
+<html lang="en" dir="ltr"> 
+<head> 
+  <title>Wiball | home</title> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> 
+  <link href='https://fonts.googleapis.com/css?family=Beth Ellen' rel='stylesheet'> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
+  <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+  <script src="https://unpkg.com/scrollreveal"></script>--> 
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> 
+  <!--navbar--> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <!--slider--> 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"> 
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> 
+</head> 
+<body> 
+<!---------------navbar---------------> 
+  <!-- Modal --> 
+  <div class="modal fade" id="myModal" > 
+	<div class="modal-dialog"> 
+	<!-- Modal content--> 
+	  <div class="modal-content"  style="border-radius: 0;"> 
+		<div class="modal-header"> 
+		  <button type="button" class="close" data-dismiss="modal">&times;</button> 
+		  <h2 class="modal-title"><i class="fas fa-shopping-cart"></i><span></span> &nbsp;My Cart</h2>
+		</div> 
+		<div class="modal-body"> 
+		  <div class="products"><!--see js file--></div> 
+		  <div class="empty-modal"> 
+			<h3>Your cart is empty. <i class="far fa-sad-tear"></i></h3> 
+			<h4>www.wiballstore.com</h4> 
+		  </div> 
+		  <div class="modal-footer"> 
+			<div class="total"><!--see js file--></div> 
+			<button type="button" class="btn btn-info" data-dismiss="modal">Check Out</button>
+		  </div> 
+		</div> 
+		<p style="text-align: center;">By availing our services you agreed with Privacy Policy <a href="#"  style="text-decoration: underline; color: #2E86C1;">Learn more</a></p> 
+	  </div> 
+	</div> 
+  </div> 
+<nav class="navbar navbar-default  navbar-fixed-top nav_one" style="border: none;"> 
+  <div class="container-fluid"> 
+    <div class="navbar-header"> 
+      <a href="#" title="@wiballstore" data-toggle="popover" data-trigger="hover" data-content="7-777777-777777"><i class="fas fa-barcode"></i></a> 
+	  <div class="navbar-brand navbar-brand-centered"><img src="image/logss.png"></div>
+	  <!--<img src="image/logo-trans.png"></div>--> 
+	</div> 
+	<ul class="ph"> 
+	    <!--something to right--> 
+	  <li class="num-item-cart" type="button" data-toggle="modal" data-target="#myModal">
+	  <i class="fas fa-shopping-cart"></i><p></p><span> &nbsp;My Cart</span></li> 
+	</ul> 
+  </div> 
+  <div class="downbar"> 
+    <ul> 
+	  <li><a href="#" style="color: blue;">Home</a></li> 
+	  <li><a href="#">Service</a></li> 
+	  <li><a href="#">Developers</a></li> 
+	  <li><a href="#">Store</a></li> 
+	  <li><a href="#">Contact</a></li> 
+	</ul> 
+  </div> 
+</nav> 
+<!----------------------------------------------> 
+<div id="overlay-side" onclick="close_nav()"></div><!--show when sidebar menu clicked--> 
+  <nav class="navbar navbar-default  navbar-fixed-top nav_two" style="background-color: #ffffff; border: none;"> 
+    <div class="container-fluid"> 
+	  <div class="navbar-header"> 
+	    <div class="btnn"> 
+	      <span class="fas fa-bars"></span> 
+        </div> 
+	    <div class="sidebar"> 
+	      <div class="text">wb - Menu</div> 
+		    <ul> 
+			  <li class="active"><a href="#">Home</a></li> 
+			  <li><a href="#">Service</a></li> 
+			  <li><a href="#">Developers</a></li> 
+			  <li><a href="#">Store</a></li> 
+			  <li><a href="#">Contact</a></li> 
+			</ul> 
+		</div> 
+		<div class="navbar-brand navbar-brand-centered"><img src="image/logss.png"></div>
+		<!--<img src="image/logo-trans.png"></div>--></div> 
+		<ul class="ph"> <!--something to right--> 
+		  <li class="num-item-cart_2" type="button" data-toggle="modal" data-target="#myModal"><i class="fas fa-shopping-cart"></i><p></p><span> &nbsp;My Cart</span></li> 
+		</ul> 
+	</div> 
+  </nav> 
+<!----------------sec_1-------------------> 
+<div class="parallax"></div> 
+<div class="slogan"><h1>get<br>PRO</h1><a href="#" style="text-decoration: none;">Inquire Now</a></div> 
+<!----------------sec_2-------------------> 
+<div class="sec_2"> 
+  <h1>YOUR BUSINESS,<br>OUR GAME</h1> 
+  <p>Want to level up your business? Don't worry we got your back! Wiball Developer's is here to help you. We will make your business more professional, We design logo for your brand, and make a website that can bring your customer's closer to you. Level up your game now and crossover to your competitor's.</p> 
+  <a href="#" style="text-decoration: none;">Explore more</a> 
+</div> 
+<!-----------------sec_3------------------> 
+<div class="sec_3"> 
+  <h1>Featured Offers</h1> 
+</div> 
+<div class="row_3"> 
+  <div class="column_3 feature_1"> 
+    <div class="contain contain-1" onmouseover="item_follow(1)" onmouseleave="item_down(1)"> 
+      <a href="#"><img src="image/com.jpg" style="width:100%; height: auto;"></a> 
+      <a class="NO-item-1" href="#" style="text-decoration: none; color: #ffffff;">100+ Items</a> 
+	</div> 
+	<h4>Website Templates</h4> 
+	<p style="color: red;"><i class="fas fa-shopping-bag"></i> &nbsp;wiball<span style="color: blue;">store</span></p> 
+  </div> 
+  <div class="column_3 feature_2"> 
+	<div class="contain contain-2" onmouseover="item_follow(2)" onmouseleave="item_down(2)"> 
+	  <a href="#"><img src="image/com.jpg" style="width:100%; height: auto;"></a> 
+      <a class="NO-item-2" href="#" style="text-decoration: none; color: #ffffff;">100+ Items</a> 
+    </div> 
+    <h4>Logo Brand</h4> 
+    <p style="color: red;"><i class="fas fa-shopping-bag"></i> &nbsp;wiball<span style="color: blue;">store</span></p> 
+  </div> 
+  <!--<div class="column_3 feature_3"> <a href="#"><img src="image/com.jpg" style="width:100%; height: auto;"></a> <h4>User Interface </h4> <p style="color: red;"><i class="fas fa-shopping-bag"></i> &nbsp;wiball<span style="color: blue;">store</span></p> </div>--> 
+</div> 
+<!----------------sec_4----------------------> 
+<div class="row_4"> 
+  <div class="column_4 one_4"> 
+    <h1>CROSSOVER</h1> 
+    <h2>get PRO</h2> 
+    <p>Start making your business shine,<br>check out our templates and logos that fits your brand.</p> 
+    <a href="#" style="text-decoration: none;">Go to Store ></a> 
+  </div> 
+  <div class="column_4 two_4"> <img src="image/lods.png"></div> 
+</div> 
+<!----------------sec_5-----------------------> 
+<div class="sec_5"><h1>Great Deals</h1></div> 
+<div class="row_5"> 
+  <div class="column_5"> 
+	<div class="swiper-container"> 
+	  <div class="swiper-wrapper"> 
+	   <!-- Slides --> 
+	    <div class="swiper-slide"><!--slide_1--> 
+	      <div class="card_5"> 
+	        <div class="image_padding"> 
+	          <img src="image/g.png" style="width: 100%;"> 
+			</div> 
+			<div class="margin_cont"> 
+			  <div class="card_one_padding"> 
+			    <div class="card_cont_5 card_1_5"> 
+				  <h3 class="type">LOGO<span style="color: red; float: right;"><i class="fas fa-shopping-bag"></i>&nbsp;wiball<span style="color: blue;">store</span></span></h3> 
+				  <h1>Golden State</h1> 
+				  <p>UI Designer's rating - <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></p> 
+  				  <div class="line_5"></div> 
+  				  <p class="price">₱ <del>350.00</del> 300.00<span style="float: right;">Crafted with <i class="fas fa-heart" style="color: pink;"></i></span></p> 
+				</div> 
+			  </div> 
+			  <div class="card_two_padding"> 
+				<div class="card_cont_5 card_2_5"> 
+				  <p>Amazing logos only here @wiballstore.</p> 
+				  <div class="get_btn"> 
+				    <a onclick="get_clicked(0, 'Golden State')" style="text-decoration: none;">Add to Cart</a> 
+				  </div> 
+				</div> 
+			  </div> 
+			</div> 
+		  </div> 
+		</div> 
+		<div class="swiper-slide"><!--slide_2--> 
+		  <div class="card_5"> 
+		  	<div class="image_padding"> 
+		      <img src="image/gg.png" style="width: 100%;"> 
+		    </div> 
+ 		  	<div class="margin_cont"> 
+		      <div class="card_one_padding"> 
+			    <div class="card_cont_5 card_1_5"> 
+			      <h3 class="type">LOGO<span style="color: red; float: right;"><i class="fas fa-shopping-bag"></i>&nbsp;wiball<span style="color: blue;">store</span></span></h3> 
+				  <h1>Chicago Bulls</h1> 
+				  <p>UI Designer's rating - <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></p>
+ 				  <div class="line_5"></div> 
+				  <p class="price">₱ <del>350.00</del> 300.00<span style="float: right;">Crafted with <i class="fas fa-heart" style="color: pink;"></i></span></p> 
+				</div> 
+			  </div> 
+			  <div class="card_two_padding"> 
+			    <div class="card_cont_5 card_2_5"> 
+				  <p>Amazing logos only here @wiballstore.</p> 
+				  <div class="get_btn"> 
+				    <a onclick="get_clicked(1, 'Chicago Bulls')" style="text-decoration: none;">Add to Cart</a> 
+				  </div> 
+				</div> 
+			  </div> 
+			</div> 
+		  </div> 
+		</div> 
+		<div class="swiper-slide"><!--slide_3--> 
+		  <div class="card_5"> 
+		    <div class="image_padding"> 
+			  <img src="image/ggg.png" style="width: 100%;"> 
+			</div> 
+			<div class="margin_cont"> 
+			  <div class="card_one_padding"> 
+			    <div class="card_cont_5 card_1_5"> 
+				  <h3 class="type">LOGO<span style="color: red; float: right;"><i class="fas fa-shopping-bag"></i>&nbsp;wiball<span style="color: blue;">store</span></span></h3> 
+				  <h1>Boston Celtics</h1> 
+				  <p>UI Designer's rating - <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></p> 
+				  <div class="line_5"></div> 
+				  <p class="price">₱ <del>350.00</del> 300.00<span style="float: right;">Crafted with <i class="fas fa-heart" style="color: pink;"></i></span></p> 
+ 				</div> 
+			  </div> 
+			  <div class="card_two_padding"> 
+			    <div class="card_cont_5 card_2_5"> 
+				  <p>Amazing logos only here @wiballstore.</p> 
+				  <div class="get_btn"> 
+				    <a onclick="get_clicked(2, 'Boston Celtics')" style="text-decoration: none;">Add to Cart</a> 
+				  </div> 
+				</div> 
+			  </div> 
+			</div> 
+		  </div> 
+		</div> 
+	  </div> 
+	  <div class="swiper-pagination"></div> 
+	  <div class="swiper-button-next"></div> 
+	  <div class="swiper-button-prev"></div> 
+	</div> 
+  </div> 
+</div> 
+<!-----------------sec_6--------------------> 
+<div class="row_6"> 
+  <div class="column_6 one_6"> 
+	<img src="image/i.jpg" style="width: 100%;"> 
+	<div class="down-down"> 
+	  <a style="text-decoration: none; color: #000000;">Add to cart</a> 
+	  <p style="color: #000000; font-weight: bold;">Responsive Card UI<span style="float: right; font-weight: normal;">₱ <del>350.00</del> 300.00</span></p> <p>Made with <i class="fas fa-heart" style="color: pink;"></i><span style="float: right;"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></span></p> 
+    </div> 
+  </div> 
+  <div class="column_6 two_6"> 
+	<img src="image/i.jpg" style="width: 100%;"> 
+	<div class="down-down"> 
+	  <a style="text-decoration: none; color: #000000;">Add to cart</a> 
+	  <p style="color: #000000; font-weight: bold;">Barbiere Template<span style="float: right; font-weight: normal;">₱ <del>350.00</del> 300.00</span></p> <p>Made with <i class="fas fa-heart" style="color: pink;"></i><span style="float: right;"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></span></p> 
+	</div> 
+  </div> 
+</div> 
+<!------------------------sec_7-------------------> 
+<div class="rise"> 
+  <h1>GET READY TO RISE.</h1> 
+  <a href="#" style=" text-decoration: none; color: #ffffff;">Inquire Now</a> 
+</div> 
+<!----------------------sec_8----------------------> 
+<div class="panel" onmouseover="collapse_show()" onmouseleave="collapse_hide()" style="margin-bottom: 4vw; box-shadow: none;"> 
+  <div class="cover_8"> 
+	<div class="panel-heading"> 
+	  <div class="row_8 panel-title"> 
+	    <div class="column_8 zero_8"> 
+		  <p>Logos</p> 
+		  <br> 
+		  <a href="#" style="text-decoration: none;">All Logos</a> 
+		  <a href="#" style="text-decoration: none;">Abstract Design</a> 
+		  <a href="#" style="text-decoration: none;">Letters Concept</a> 
+		  <a href="#" style="text-decoration: none;">Animal Inspired</a> 
+		  <a href="#" style="text-decoration: none;">Realty Logos</a> 
+		</div> 
+		<div class="column_8 one_8"> 
+	      <p>Templates</p> 
+		  <br> 
+		  <a href="#" style="text-decoration: none;">All Templates</a> 
+		  <a href="#" style="text-decoration: none;">Barbiere De Gianie</a> 
+		  <a href="#" style="text-decoration: none;">Bean Leaf Caffe'</a> 
+		  <a href="#" style="text-decoration: none;">Tup Cavite</a> 
+		  <a href="#" style="text-decoration: none;">BL Realty</a> 
+		</div> 
+		<div class="column_8 two_8"> 
+		  <p>User Interface</p> 
+		  <br> 
+		  <a href="#" style="text-decoration: none;">All User Interface</a> 
+		  <a href="#" style="text-decoration: none;">Awesome Cards</a> 
+		  <a href="#" style="text-decoration: none;">Responsive Headers</a> 
+		  <a href="#" style="text-decoration: none;">Formal Footers</a> 
+		  <a href="#" style="text-decoration: none;">Slider Cards</a> 
+		</div> 
+		<div class="column_8 three_8"> 
+		  <p>E-Books</p> 
+		  <br> 
+		  <a href="#" style="text-decoration: none;">Programming</a> 
+		  <a href="#" style="text-decoration: none;">User Interface</a> 
+		  <a href="#" style="text-decoration: none;">Creative Logo</a> 
+		</div> 
+	  </div> 
+	</div> 
+	<div class="panel-collapse collapse"> 
+	  <div class="panel-body"> 
+	    <div class="column_8 zero_8 body_1"> 
+		  <a href="#" style="text-decoration: none;">Flower logos</a> 
+		  <a href="#" style="text-decoration: none;">Elegant look</a> 
+		  <a href="#" style="text-decoration: none;">Formal logos</a> 
+		</div> 
+		<div class="column_8 one_8 body_2"> 
+		  <a href="#" style="text-decoration: none;">Jez Company</a> 
+		  <a href="#" style="text-decoration: none;">Ecomerce Website</a> 
+		  <a href="#" style="text-decoration: none;">Blog Templates</a> 
+		</div> 
+		<div class="column_8 two_8 body_3"> 
+		  <a href="#" style="text-decoration: none;">Buttons</a> 
+		  <a href="#" style="text-decoration: none;">Awesome Cards</a> 
+		  <a href="#" style="text-decoration: none;">Responsive Headers</a> 
+		  <a href="#" style="text-decoration: none;">Formal Footers</a> 
+		</div> 
+      </div> 
+	</div> 
+  </div> 
+</div> 
+<div class="accordion-mobile"> 
+  <button class="accordion">Logos</button> 
+  <div class="panel_acc"> 
+	<a href="#" style="text-decoration: none;">All Logos</a> 
+	<a href="#" style="text-decoration: none;">Abstract Design</a> 
+	<a href="#" style="text-decoration: none;">Letters Concept</a> 
+	<a href="#" style="text-decoration: none;">Animal Inspired</a> 
+	<a href="#" style="text-decoration: none;">Realty Logos</a> 
+	<a href="#" style="text-decoration: none;">Flower logos</a> 
+	<a href="#" style="text-decoration: none;">Elegant look</a> 
+	<a href="#" style="text-decoration: none;">Formal logos</a> 
+  </div> 
+  <button class="accordion">Templates</button> 
+  <div class="panel_acc"> 
+	<a href="#" style="text-decoration: none;">All Templates</a> 
+	<a href="#" style="text-decoration: none;">Barbiere De Gianie</a> 
+	<a href="#" style="text-decoration: none;">Bean Leaf Caffe'</a> 
+	<a href="#" style="text-decoration: none;">Tup Cavite</a> 
+	<a href="#" style="text-decoration: none;">BL Realty</a> 
+	<a href="#" style="text-decoration: none;">Jez Company</a> 
+	<a href="#" style="text-decoration: none;">Ecomerce Website</a> 
+	<a href="#" style="text-decoration: none;">Blog Templates</a> 
+  </div> 
+  <button class="accordion">User Interface</button> 
+  <div class="panel_acc"> 
+	<a href="#" style="text-decoration: none;">All User Interface</a> 
+	<a href="#" style="text-decoration: none;">Awesome Cards</a> 
+	<a href="#" style="text-decoration: none;">Responsive Headers</a> 
+	<a href="#" style="text-decoration: none;">Formal Footers</a> 
+	<a href="#" style="text-decoration: none;">Slider Cards</a> 
+	<a href="#" style="text-decoration: none;">Buttons</a> 
+	<a href="#" style="text-decoration: none;">Awesome Cards</a> 
+	<a href="#" style="text-decoration: none;">Responsive Headers</a> 
+  </div> 
+  <button class="accordion">E-Books</button> 
+  <div class="panel_acc"> 
+	<a href="#" style="text-decoration: none;">Progamming</a> 
+	<a href="#" style="text-decoration: none;">User Interface</a> 
+	<a href="#" style="text-decoration: none;">Creative Logo</a> 
+  </div> 
+</div> 
+<footer> 
+  <div class="row-footer"> 
+	<div class="column-footer about-f"> 
+	  <h3><span style="color: red;">|</span><span style="color: blue;">|</span> About wiballstore</h3> 
+	  <p>Wiball Store is built by web developer students who create beautiful logos and Website templates for your business. We offer free responsive UIs for faster web developing and for learning purposes, Selling E-books for programming and other interest is our side job.</p> 
+	</div> 
+	<div class="column-footer in-touch"> 
+	  <h4><a href="#"><i class="fab fa-facebook"></i></a> 
+	  <a href="#"><i class="fab fa-google-plus"></i></a> 
+	  <a href="#"><i class="fab fa-facebook-messenger"></i></a></h4> 
+	</div> 
+  </div> 
+  <div class="row-footer-2"> 
+	<div class="column-footer-2"> 
+	  <p style="color: grey;">© 2020 Wiball Store, All Rights Reserved</p> 
+	</div> 
+	<div class="column-footer-2"> 
+	  <a href="#">Disclaimer</a> <a href="#">Terms and Conditions</a> 
+	  <a href="#">Privacy Policy</a> 
+	</div> 
+  </div> 
+</footer> 
+<script src="main.js"></script> 
+</body> 
+</html> <!--https://youtu.be/1S6yLaUcJ6M?t=17
